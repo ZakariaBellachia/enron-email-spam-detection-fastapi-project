@@ -1,0 +1,52 @@
+Structure du dossier
+Le numéro de série du volume est 1E4E-B4F2
+C:.
+¦   .dockerignore
+¦   ARCHITECTURE.txt
+¦   docker-compose.yml
+¦   Dockerfile.backend
+¦   Dockerfile.frontend
+¦   requirements.txt
+¦   
++---.idea
+¦   ¦   .gitignore
+¦   ¦   backend_email_spam_detection_project.iml
+¦   ¦   misc.xml
+¦   ¦   modules.xml
+¦   ¦   workspace.xml
+¦   ¦   
+¦   +---inspectionProfiles
+¦           profiles_settings.xml
+¦           
++---.vscode
+¦       settings.json
+¦       
++---app
+¦   ¦   frontend.py
+¦   ¦   main.py
+¦   ¦   model_utils.py
+¦   ¦   utils.py
+¦   ¦   
+¦   +---model
+¦   ¦       model.joblib
+¦   ¦       tfidf.joblib
+¦   ¦       
+¦   +---__pycache__
+¦           main.cpython-310.pyc
+¦           model_utils.cpython-310.pyc
+¦           utils.cpython-310.pyc
+¦           
++---data
+¦       enron_spam_data.csv
+¦       enron_spam_data.json
+¦       LICENSE.txt
+¦       
++---notebooks
+¦       eda.ipynb
+¦       
++---scripts
+    ¦   convert_csv_to_json.py
+    ¦   
+    +---__pycache__
+            convert_csv_to_json.cpython-310.pyc
+            
