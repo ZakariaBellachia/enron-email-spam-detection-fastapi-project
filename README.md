@@ -31,7 +31,7 @@ A web application that classifies emails as spam or ham, built using the Enron e
 
   Trained model is saved and used by the backend API for real-time predictions
 
-  Roughly 70% of the project code is in this notebook
+  Roughly 84% of the project code is in this notebook
 
   ML Model Accuracy: 96%
 
