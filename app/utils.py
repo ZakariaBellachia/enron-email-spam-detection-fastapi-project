@@ -2,8 +2,9 @@ import pandas as pd
 import json
 import os
 
-# Path relative to project root
-DATA_FOLDER = os.path.join("data")
+# Path relative to the script's directory (app/)
+SCRIPT_DIR = os.path.dirname(__file__)
+DATA_FOLDER = os.path.join(SCRIPT_DIR, "..", "data")
 
 def load_data_csv():
     csv_path = os.path.join(DATA_FOLDER, "enron_spam_data.csv")

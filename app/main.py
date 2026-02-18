@@ -10,6 +10,7 @@ from app.model_utils import predict_email
 import logging
 from contextlib import asynccontextmanager
 import os
+from fastapi import Response
 # Add at top of file
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -106,6 +107,6 @@ def new_messages(email: Emails_data):
         }
     )
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {"status": "ok", "model_loaded": True}
