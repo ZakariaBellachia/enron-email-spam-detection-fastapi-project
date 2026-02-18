@@ -1,20 +1,28 @@
+version: '3.8'
+
 services:
   backend:
     build:
       context: .
       dockerfile: Dockerfile.backend
     volumes:
-      - ./data:/app/data        # <- your JSON file will be here
+      - ./data:/app/data
     ports:
       - "8000:8000"
+    container_name: enron-backend
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
     volumes:
-      - ./data:/app/data        # <- frontend can read JSON too
+      - ./data:/app/data
     ports:
       - "8501:8501"
+    environment:
+      DOCKER: "1"
+      BACKEND_URL: "http://backend:8000"
     depends_on:
       - backend
+    container_name: enron-frontend
+
